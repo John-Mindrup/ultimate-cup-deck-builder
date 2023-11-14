@@ -1,7 +1,7 @@
 import {React} from "react"
 import { CardList } from "./cardlist";
 import {Card} from "./Card.jsx";
-import { Flex, Space } from "antd";
+import { Flex } from "antd";
 export default function Joke(props){
 
 
