@@ -7,7 +7,7 @@ export default function Joke(props){
 
 
 function AddCard(Card){
-    if(Card == undefined)
+    if(Card === undefined)
         return;
     let num = props.cardsMap.get(Card.CardNum)?? 0;
     if(num >= 4)
