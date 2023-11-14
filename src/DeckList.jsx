@@ -3,7 +3,7 @@ import { Flex } from "antd"
 
 export default function DeckList(props){
     function RemoveCard(Card){
-        if(Card == undefined)
+        if(Card === undefined)
             return
         let newDeck = props.deck;
         let ind = newDeck.indexOf(Card);
