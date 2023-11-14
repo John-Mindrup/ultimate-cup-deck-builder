@@ -21,7 +21,7 @@ export default function DeckList(props){
             props.deck.map(item =>
                 {
                     let index = item.CardNum.replace(/[()]/g, '') + ".png";
-                    return <div style={{width:100}}><img onClick={() => RemoveCard(item)} width={100} src={props.images[index]}></img></div>
+                    return <div style={{width:100}}><img alt={item.CardName} onClick={() => RemoveCard(item)} width={100} src={props.images[index]}></img></div>
                 })
         }
         <div>{props.cardsInDeck}</div>
