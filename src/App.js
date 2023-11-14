@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import {React, useState, useEffect} from 'react';
 import './App.css';
 import Joke from './Joke';
@@ -26,13 +25,17 @@ function removeCard(i){
   setCardsInDeck(cardsInDeck - i);
 }
 
+function updateMap(){
+setCardsMap(map);
+}
+
 function updateDeck(d){
   setDeck([...d]);
 }
 
 function importAll(r){
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    let ret = r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
     return images;
 }
   return (
