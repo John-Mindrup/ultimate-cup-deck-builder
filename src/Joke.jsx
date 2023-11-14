@@ -14,6 +14,10 @@ function AddCard(Card){
         return;
     let newDeck = [...props.deck, Card];
     props.cardsMap.set(Card.CardNum, num+1);
+    if(Card.CardType === "Digi-Egg")
+            props.removeEgg(-1);
+        else
+            props.removeCard(-1);
     props.updateDeck(newDeck);
 }
     return (<Flex wrap="wrap" >

@@ -11,9 +11,9 @@ export default function DeckList(props){
         let num = props.cardsMap.get(Card.CardNum)?? 0;
         props.cardsMap.set(Card.CardNum, num-1);
         if(Card.CardType === "Digi-Egg")
-            props.removeEgg();
+            props.removeEgg(1);
         else
-            props.removeCard();
+            props.removeCard(1);
         props.updateDeck(newDeck);
     }
     return <Flex wrap="wrap">

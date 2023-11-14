@@ -3,22 +3,27 @@ import {React, useState, useEffect} from 'react';
 import './App.css';
 import Joke from './Joke';
 import DeckList from './DeckList';
+import { Button, Drawer } from 'antd';
+import { Header } from 'antd/es/layout/layout';
 function App() {
 const [deck, setDeck] = useState([]);
 const [images, setImages] = useState([]);
 const [cardsMap, setCardsMap] = useState(new Map());
 const [eggs, setEggs] = useState(0);
 const [cardsInDeck, setCardsInDeck] = useState(0);
+const [showDeck, setShowDeck] = useState(false);
 useEffect(() => {
    let imgs = importAll(require.context('./cardthumbnails', false, /\.(png|jpe?g|svg)$/));
    setImages(imgs);
 }, []);
 
-function removeEgg(){
-  setEggs(eggs - 1);
+//ew
+function removeEgg(i){
+  setEggs(eggs - i);
 }
-function removeCard(){
-  setCardsInDeck(cardsInDeck - 1);
+//ew
+function removeCard(i){
+  setCardsInDeck(cardsInDeck - i);
 }
 
 function updateDeck(d){
@@ -32,8 +37,9 @@ function importAll(r){
 }
   return (
     <div className="App">
-      <DeckList removeEgg={removeEgg} removeCard={removeCard} cardsInDeck={cardsInDeck} cardsMap={cardsMap} updateDeck={updateDeck} deck = {deck} images={images}/>
-      <Joke eggs={eggs} cardsInDeck={cardsInDeck} cardsMap={cardsMap} updateDeck={updateDeck} deck = {deck} images={images}/>
+      <Header><Button onClick={() => setShowDeck(!showDeck)}>Show/Hide Deck</Button></Header>
+      <Drawer mask={false} autoFocus={false} placement='bottom' onClose={() => setShowDeck(false)} open={showDeck}><DeckList removeEgg={removeEgg} removeCard={removeCard} cardsInDeck={cardsInDeck} cardsMap={cardsMap} updateDeck={updateDeck} deck = {deck} images={images}/></Drawer>
+      <Joke removeEgg={removeEgg} removeCard={removeCard} cardsMap={cardsMap} updateDeck={updateDeck} deck = {deck} images={images}/>
     </div>
   );
 }
