@@ -7,7 +7,7 @@ import { Header } from 'antd/es/layout/layout';
 function App() {
 const [deck, setDeck] = useState([]);
 const [images, setImages] = useState([]);
-const [cardsMap, setCardsMap] = useState(new Map());
+const [cardsMap] = useState(new Map());
 const [eggs, setEggs] = useState(0);
 const [cardsInDeck, setCardsInDeck] = useState(0);
 const [showDeck, setShowDeck] = useState(false);
@@ -25,17 +25,13 @@ function removeCard(i){
   setCardsInDeck(cardsInDeck - i);
 }
 
-function updateMap(){
-setCardsMap(cardsMap);
-}
-
 function updateDeck(d){
   setDeck([...d]);
 }
 
 function importAll(r){
     let images = {};
-    let ret = r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); return null;});
     return images;
 }
   return (
