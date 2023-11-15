@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ultimate-cup-deck-builder/static/css/main.073c9b0a.css",
-    "main.js": "/ultimate-cup-deck-builder/static/js/main.d9906aaa.js",
+    "main.js": "/ultimate-cup-deck-builder/static/js/main.0f12f592.js",
     "static/js/787.16f177e3.chunk.js": "/ultimate-cup-deck-builder/static/js/787.16f177e3.chunk.js",
     "static/media/P-113.png": "/ultimate-cup-deck-builder/static/media/P-113.3f6b3478e30261d70b60.png",
     "static/media/P-109.png": "/ultimate-cup-deck-builder/static/media/P-109.ebfe822865dfbb5f0ef1.png",
@@ -328,11 +328,11 @@
     "static/media/68.png": "/ultimate-cup-deck-builder/static/media/68.7198377a11aa760a2d26.png",
     "index.html": "/ultimate-cup-deck-builder/index.html",
     "main.073c9b0a.css.map": "/ultimate-cup-deck-builder/static/css/main.073c9b0a.css.map",
-    "main.d9906aaa.js.map": "/ultimate-cup-deck-builder/static/js/main.d9906aaa.js.map",
+    "main.0f12f592.js.map": "/ultimate-cup-deck-builder/static/js/main.0f12f592.js.map",
     "787.16f177e3.chunk.js.map": "/ultimate-cup-deck-builder/static/js/787.16f177e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d9906aaa.js"
+    "static/js/main.0f12f592.js"
   ]
 }
