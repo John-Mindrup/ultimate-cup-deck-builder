@@ -26,7 +26,7 @@ function removeCard(i){
 }
 
 function updateMap(){
-setCardsMap(map);
+setCardsMap(cardsMap);
 }
 
 function updateDeck(d){
